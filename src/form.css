@@ -1,0 +1,60 @@
+.flex__row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-validators__wrapper {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+
+.form-validators__group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+    margin-left: 16px;
+}
+
+.form__group {
+    width: 400px;
+}
+
+.form__label{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.wrapper {
+    margin-left: 48px;
+    margin-top: 48px;
+    width: 600px;
+}
+
+.form__input{
+    line-height: 24px;
+    font-size: 20px;
+}
+
+.footer{
+    font-size: 16px;
+}
+
+.button__description{
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
