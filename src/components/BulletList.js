@@ -9,7 +9,7 @@ return (
         <li key="2">One uppercase character</li>
         <li key="3">Min. 8 characters</li>
         <li key="4">One number</li>
-        <li key="4">One special character</li>
+        <li key="5">One special character</li>
       </ul>
   </div>
 

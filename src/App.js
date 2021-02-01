@@ -12,27 +12,33 @@ import Checkbox from "./components/Checkbox";
 const App = () => {
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
-  const [password, setPasword] = useState('')
+  const [password, setPassword] = useState('')
   const [isEmailValid, setIsEmailValid] = useState(false);
   const [isUsernameLowerCase, setIsUsernameLowerCase] = useState(false);
   const [isPassOneLowerCase, setIsPassOneLowerCase] = useState(false);
   const [isPassOneUpperCase, setIsPassOneUpperCase] = useState(false);
   const [isPassLongEnough, setIsPassLongEnough] = useState(false);
   const [isPassOneNum, setIsPassOneNum] = useState(false);
+  const [isPassSpecialChar, setIsPassSpecialChar] = useState(false);
 
   const hasLowerCase = (str) => {
-    return str.toUpperCase() != str;
+    return str.toUpperCase() !== str;
   };
 
   const hasUpperCase = (str) => {
-    return str.toLowerCase() != str;
+    return str.toLowerCase() !== str;
   };
 
   const hasNumber = (str) => {
     const matches = str.match(/\d+/g);
-    return matches != null
+    return matches !== null
   };
   
+  const hasSpecialChar = (str) => {
+    const format = /[ -/:-@[-`{-~]/;
+    return format.test(str);
+  };
+
   const handleEmailChange = (event) => {
     const localEmail = event.target.value
     setEmail(localEmail)
@@ -48,6 +54,7 @@ const App = () => {
 
   const handlePasswordChange = (event) => {
     const localPassword = event.target.value
+    setPassword(localPassword)
 
     hasLowerCase(localPassword) ? setIsPassOneLowerCase(true) : setIsPassOneLowerCase(false)
 
@@ -56,6 +63,8 @@ const App = () => {
     localPassword.length >= 8 ? setIsPassLongEnough(true) : setIsPassLongEnough(false)
 
     hasNumber(localPassword) ? setIsPassOneNum(true) : setIsPassOneNum(false)
+
+    hasSpecialChar(localPassword) ? setIsPassSpecialChar(true) : setIsPassSpecialChar(false)
 
   }
 
@@ -67,12 +76,12 @@ const App = () => {
 
       <form>
         <Field type="text" id="email" value={email} onChange={handleEmailChange}></Field>
-        <Field type="text" id="username" onChange={handleUsernameChange}></Field>
-        <Field type="password" id="password" onChange={handlePasswordChange}></Field>
+        <Field type="text" id="username" value={username} onChange={handleUsernameChange}></Field>
+        <Field type="password" id="password" value={password} onChange={handlePasswordChange}></Field>
         <BulletList/>
         
         <div className="button-wraper">
-          <Button disabled={!isEmailValid || !isUsernameLowerCase || !isPassOneLowerCase || !isPassOneUpperCase || !isPassLongEnough || !isPassOneNum}/><Checkbox/>
+          <Button disabled={!isEmailValid || !isUsernameLowerCase || !isPassOneLowerCase || !isPassOneUpperCase || !isPassLongEnough || !isPassOneNum || !isPassSpecialChar}/><Checkbox/>
         </div> 
       </form>
 
