@@ -3,7 +3,7 @@ import React from 'react';
 const Header = ({children}) => {
 
 return (
-  <div>
+  <div className="header">
     {children}
   </div>
 )};

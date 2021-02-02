@@ -75,13 +75,14 @@ const App = () => {
       <Subheader>Find you people. Engage your customers. Build your brand. Do it all with Mailchimp's Marketing Platform. Already have an account. Log in.</Subheader>
 
       <form>
-        <Field type="text" id="email" value={email} onChange={handleEmailChange}></Field>
-        <Field type="text" id="username" value={username} onChange={handleUsernameChange}></Field>
-        <Field type="password" id="password" value={password} onChange={handlePasswordChange}></Field>
-        <BulletList/>
+        <Field type="text" id="email" value={email} onChange={handleEmailChange}>Email</Field>
+        <Field type="text" id="username" value={username} onChange={handleUsernameChange}>Username</Field>
+        <Field type="password" id="password" value={password} onChange={handlePasswordChange}>Password</Field>
+        <BulletList isPassOneLowerCase={isPassOneLowerCase} isPassOneUpperCase={isPassOneUpperCase} isPassLongEnough={isPassLongEnough} isPassOneNum={isPassOneNum} isPassSpecialChar={isPassSpecialChar}/>
         
-        <div className="button-wraper">
-          <Button disabled={!isEmailValid || !isUsernameLowerCase || !isPassOneLowerCase || !isPassOneUpperCase || !isPassLongEnough || !isPassOneNum || !isPassSpecialChar}/><Checkbox/>
+        <div className="button-wrapper">
+          <Button disabled={!isEmailValid || !isUsernameLowerCase || !isPassOneLowerCase || !isPassOneUpperCase || !isPassLongEnough || !isPassOneNum || !isPassSpecialChar}/>
+          <Checkbox/>
         </div> 
       </form>
 

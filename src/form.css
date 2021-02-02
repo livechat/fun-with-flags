@@ -1,4 +1,31 @@
+.button {
+  flex-grow: 2;
+}
+
 .button-wrapper {
   display: flex;
-  text-decoration-color: red;
+  justify-content: space-between;
+  max-height: 36px;
+}
+
+.bullet {
+  color: #1a0f05;
+}
+
+.bullet--disabled {
+  color: #bdbbb9;
+}
+
+.header {
+  font-size: 4.4rem;
+  margin-bottom: 40px;
+}
+
+.subheader {
+  margin-bottom: 30px;
+}
+
+.footer {
+  font-size: 1.4rem;
+  padding-top: 20px;
 }

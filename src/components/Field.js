@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Field = ({type, id, onChange, value}) => {
+const Field = ({type, id, onChange, value, children}) => {
 
   return (
     <div>
-      <input type={type} value={value} onChange={onChange} id={id}/>
+      <label for="id">{children}</label>
+      <input type={type} value={value} onChange={onChange} id={id}></input>
     </div>
   )
 };

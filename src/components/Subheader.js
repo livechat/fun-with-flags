@@ -3,7 +3,7 @@ import React from 'react';
 const Subheader = ({children}) => {
 
 return (
-  <div>
+  <div className="subheader">
     {children}
   </div>
 )};
