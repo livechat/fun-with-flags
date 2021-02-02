@@ -15,11 +15,11 @@ const App = () => {
   const [password, setPassword] = useState('')
   const [isEmailValid, setIsEmailValid] = useState(false);
   const [isUsernameLowerCase, setIsUsernameLowerCase] = useState(false);
-  const [isPassOneLowerCase, setIsPassOneLowerCase] = useState(false);
-  const [isPassOneUpperCase, setIsPassOneUpperCase] = useState(false);
-  const [isPassLongEnough, setIsPassLongEnough] = useState(false);
-  const [isPassOneNum, setIsPassOneNum] = useState(false);
-  const [isPassSpecialChar, setIsPassSpecialChar] = useState(false);
+  const [isPassOneLowerCase, setIsPassOneLowerCase] = useState(true);
+  const [isPassOneUpperCase, setIsPassOneUpperCase] = useState(true);
+  const [isPassLongEnough, setIsPassLongEnough] = useState(true);
+  const [isPassOneNum, setIsPassOneNum] = useState(true);
+  const [isPassSpecialChar, setIsPassSpecialChar] = useState(true);
 
   const hasLowerCase = (str) => {
     return str.toUpperCase() !== str;
@@ -72,7 +72,7 @@ const App = () => {
     <div className="App">
       <Header>Welcome to Mailchimp</Header>
 
-      <Subheader>Find you people. Engage your customers. Build your brand. Do it all with Mailchimp's Marketing Platform. Already have an account. Log in.</Subheader>
+      <Subheader>Find your people. Engage your customers. Build your brand. Do it all with Mailchimp's Marketing Platform. Already have an account. <a className="link link--nodecoration" href="www.google.com">Log in</a></Subheader>
 
       <form>
         <Field type="text" id="email" value={email} onChange={handleEmailChange}>Email</Field>
@@ -86,7 +86,7 @@ const App = () => {
         </div> 
       </form>
 
-      <Footer>By clicking the "Sign Up" button, you are creating a Mailchimp account, and you agree to Mailchimp's Terms of Use and Privacy Policy.</Footer>
+      <Footer>By clicking the "Sign Up" button, you are creating a Mailchimp account, and you agree to Mailchimp's <a className="link" href="www.google.com">Terms of Use</a> and <a className="link" href="www.google.com">Privacy Policy.</a></Footer>
     </div>
   );
 }

@@ -1,19 +1,25 @@
 import React from 'react';
 
-const BulletList = ({isPassOneLowerCase, isPassOneUpperCase, isPassLongEnough, isPassOneNum, isPassSpecialChar}) => {
+const BulletList1 = ({bullets, condition}) => {
 
 return (
-  <div className="bullet-list">
-      <ul>
+  <div>
+      {/* <ul>
         <li key="lower" className={`bullet--${!isPassOneLowerCase ? "disabled" : ""}`}>One lowercase character</li>
         <li key="upper" className={`bullet--${!isPassOneUpperCase ? "disabled" : ""}`}>One uppercase character</li>
         <li key="length" className={`bullet--${!isPassLongEnough ? "disabled" : ""}`}>Min. 8 characters</li>
-        </ul>
-        <ul className="ul">
         <li key="num" className={`bullet--${!isPassOneNum ? "disabled" : ""}`}>One number</li>
         <li key="special" className={`bullet--${!isPassSpecialChar ? "disabled" : ""}`}>One special character</li>
+      </ul> */}
+
+      <ul>
+        {bullets.map((bullet, index) => {
+         return <li key={index} className={`bullet--${!condition ? "disabled" : ""}`}>{bullet}</li>
+        })}
       </ul>
-      </div>
+  </div>
+
   )};
+  //problem: jak tu przekazywac stan
   
-export default BulletList;
+export default BulletList1;
