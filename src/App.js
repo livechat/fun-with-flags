@@ -15,11 +15,14 @@ const App = () => {
   const [password, setPassword] = useState('')
   const [isEmailValid, setIsEmailValid] = useState(false);
   const [isUsernameLowerCase, setIsUsernameLowerCase] = useState(false);
-  const [isPassOneLowerCase, setIsPassOneLowerCase] = useState(true);
-  const [isPassOneUpperCase, setIsPassOneUpperCase] = useState(true);
-  const [isPassLongEnough, setIsPassLongEnough] = useState(true);
-  const [isPassOneNum, setIsPassOneNum] = useState(true);
-  const [isPassSpecialChar, setIsPassSpecialChar] = useState(true);
+  const [isPassOneLowerCase, setIsPassOneLowerCase] = useState(false);
+  const [isPassOneUpperCase, setIsPassOneUpperCase] = useState(false);
+  const [isPassLongEnough, setIsPassLongEnough] = useState(false);
+  const [isPassOneNum, setIsPassOneNum] = useState(false);
+  const [isPassSpecialChar, setIsPassSpecialChar] = useState(false);
+  const [isCheckboxTicked, setIsCheckboxTicked] = useState(false);
+
+  const isValid = !isEmailValid || !isUsernameLowerCase || !isPassOneLowerCase || !isPassOneUpperCase || !isPassLongEnough || !isPassOneNum || !isPassSpecialChar || !isCheckboxTicked
 
   const hasLowerCase = (str) => {
     return str.toUpperCase() !== str;
@@ -35,8 +38,8 @@ const App = () => {
   };
   
   const hasSpecialChar = (str) => {
-    const format = /[ -/:-@[-`{-~]/;
-    return format.test(str);
+    const matches = str.match(/[ -/:-@[-`{-~]/)
+    return matches !== null
   };
 
   const handleEmailChange = (event) => {
@@ -55,18 +58,17 @@ const App = () => {
   const handlePasswordChange = (event) => {
     const localPassword = event.target.value
     setPassword(localPassword)
-
-    hasLowerCase(localPassword) ? setIsPassOneLowerCase(true) : setIsPassOneLowerCase(false)
-
-    hasUpperCase(localPassword) ? setIsPassOneUpperCase(true) : setIsPassOneUpperCase(false)
-
-    localPassword.length >= 8 ? setIsPassLongEnough(true) : setIsPassLongEnough(false)
-
-    hasNumber(localPassword) ? setIsPassOneNum(true) : setIsPassOneNum(false)
-
-    hasSpecialChar(localPassword) ? setIsPassSpecialChar(true) : setIsPassSpecialChar(false)
-
+    setIsPassOneLowerCase(hasLowerCase(localPassword))
+    setIsPassOneUpperCase(hasUpperCase(localPassword))
+    setIsPassLongEnough(localPassword.length >= 8)
+    setIsPassOneNum(hasNumber(localPassword))
+    setIsPassSpecialChar(hasSpecialChar(localPassword))
   }
+
+  const handleCheckboxClick = (event) => {
+    const localState = event.target.checked
+    setIsCheckboxTicked(localState)
+  };
 
   return (
     <div className="App">
@@ -75,14 +77,14 @@ const App = () => {
       <Subheader>Find your people. Engage your customers. Build your brand. Do it all with Mailchimp's Marketing Platform. Already have an account. <a className="link link--nodecoration" href="www.google.com">Log in</a></Subheader>
 
       <form>
-        <Field type="text" id="email" value={email} onChange={handleEmailChange}>Email</Field>
-        <Field type="text" id="username" value={username} onChange={handleUsernameChange}>Username</Field>
-        <Field type="password" id="password" value={password} onChange={handlePasswordChange}>Password</Field>
+        <Field type="text" id="email" value={email} onChange={handleEmailChange} label="Email"></Field>
+        <Field type="text" id="username" value={username} onChange={handleUsernameChange} label="Username"></Field>
+        <Field type="password" id="password" value={password} onChange={handlePasswordChange} label="Password"></Field>
         <BulletList isPassOneLowerCase={isPassOneLowerCase} isPassOneUpperCase={isPassOneUpperCase} isPassLongEnough={isPassLongEnough} isPassOneNum={isPassOneNum} isPassSpecialChar={isPassSpecialChar}/>
         
         <div className="button-wrapper">
-          <Button disabled={!isEmailValid || !isUsernameLowerCase || !isPassOneLowerCase || !isPassOneUpperCase || !isPassLongEnough || !isPassOneNum || !isPassSpecialChar}/>
-          <Checkbox/>
+          <Button disabled={isValid}/>
+          <Checkbox onClick={handleCheckboxClick}/>
         </div> 
       </form>
 

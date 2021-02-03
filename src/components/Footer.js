@@ -3,9 +3,9 @@ import React from 'react';
 const Footer = ({children}) => {
 
   return (
-    <div className="footer">
+    <footer className="footer">
       {children}
-    </div>
+    </footer>
   )};
   
   export default Footer;

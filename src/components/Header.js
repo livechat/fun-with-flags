@@ -3,9 +3,9 @@ import React from 'react';
 const Header = ({children}) => {
 
 return (
-  <div className="header">
+  <header className="header">
     {children}
-  </div>
+  </header>
 )};
 
 export default Header;

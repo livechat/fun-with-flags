@@ -1,9 +1,9 @@
-.bullet {
-  color: #1a0f05;
+.bullet--gray {
+  color: #bdbbb9;
 }
 
-.bullet--disabled {
-  color: #bdbbb9;
+.bullet--black {
+  color: #1a0f05;
 }
 
 .bullet-list {
