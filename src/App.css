@@ -95,7 +95,7 @@ body {
 }
 
 .reqList {
-  width: %;
+  width: 100%;
   height: 200px;
 -webkit-column-count: 2;
    -moz-column-count: 2;
