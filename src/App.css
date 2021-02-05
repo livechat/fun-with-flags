@@ -46,7 +46,17 @@ ol,
 ul,
 fieldset,
 form,
-label,
+label {
+  color: #241c15;
+  font-weight: 500;
+  display: block;
+  max-width: 635px;
+  padding-bottom: 12px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 legend,
 textarea,
 table,
@@ -83,3 +93,32 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
 }
+
+.reqList {
+  width: %;
+  height: 200px;
+-webkit-column-count: 2;
+   -moz-column-count: 2;
+        column-count: 2;
+}  
+
+.reqList li {
+  display: inline-block;
+}
+
+.reqList li::before {
+  content:'';
+  height: 5px;
+  width: 5px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+button {
+  pointer-events: none;
+    border: 1px solid #dedddc;
+    color: #bdbbb9;
+    background-color: transparent;
+}
+

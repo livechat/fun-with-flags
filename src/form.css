@@ -1,0 +1,93 @@
+.bullet--gray {
+  color: #bdbbb9;
+}
+
+.bullet--black {
+  color: #1a0f05;
+}
+
+.bullet-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px 20px 5px;
+  padding: 0 15px;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.button {
+  height: 50px;
+  margin: 0 30px 0 0;
+  flex-grow: 1;
+  font-weight: 500;
+  font-size: large;
+  background-color: white;
+  border-color: #bdbbb9;
+}
+
+.button-wrapper {
+  display: flex;
+  max-height: 54px;
+}
+
+.checkbox-wraper {
+  font-size: 1.1rem;
+  max-width: 70%;
+  padding-left: 35px;
+}
+
+.checkbox {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.error {
+  font-size: 1.2rem;
+  color: rgb(158, 11, 11);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 15px 0;
+}
+
+.footer {
+  font-size: 1.1rem;
+  padding-top: 20px;
+}
+
+.header {
+  font-size: 4rem;
+  margin-bottom: 40px;
+}
+
+.input {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.label {
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.link {
+  color: #007c89;
+}
+
+.link--nodecoration {
+  text-decoration: none;
+}
+
+.subheader {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.ul {
+  padding-right: 120px;
+}
