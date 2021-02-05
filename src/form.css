@@ -1,0 +1,122 @@
+.flex__row {
+    display: flex;
+    flex-direction: row;
+}
+
+.center__vertical{
+    align-items: center;
+}
+
+.flex__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-validators__wrapper {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+
+.form-validators__group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+    margin-left: 16px;
+}
+
+.form__group {
+    width: 400px;
+    position: relative;
+}
+
+.form__label{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.wrapper {
+    margin-left: 48px;
+    margin-top: 48px;
+    width: 600px;
+}
+
+.form__input{
+    line-height: 24px;
+    font-size: 16px;;
+}
+
+.footer{
+    font-size: 16px;
+}
+
+.button__description{
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.form-validators__criteria__met {
+    color: #bdbbb9;
+}
+
+.form-validators__feedback__success {
+    background-color: #d8eacc;
+    width: 400px;
+    font-size: 20px;
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.form__password__visibility__handler {
+    position: absolute;
+    right:0;
+    font-size: 14px;
+}
+
+.button__signup{
+    font-weight: 500;
+    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 18px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: inline-block;
+    -ms-transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
+    transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
+    transition-property: border, box-shadow, background-color;
+    transition-duration: 0.2s, 0.2s, 0.2s;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s, 0s;
+    font-size: 16px;
+    height: 48px;
+    line-height: 46px;
+    background-color: #007c89;
+    color: #ffffff;
+    width: 200px;
+}
+.margin__top__24{
+    margin-top: 24px;
+}
+.margin__bottom__24 {
+    margin-bottom: 24px;
+}
