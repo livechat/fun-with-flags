@@ -1,33 +1,54 @@
+.App {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .bullet--gray {
   color: #bdbbb9;
 }
 
-.bullet--black {
-  color: #1a0f05;
+.bullet--black::marker {
+  color: #007c89;
 }
 
 .bullet-list {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0px 20px 5px;
-  padding: 0 15px;
+  margin: 10px 0px 20px 0px;
+  padding: 0;
   font-weight: normal;
   font-size: 1.2rem;
   line-height: 1.5;
 }
 
-.button {
-  height: 50px;
-  margin: 0 30px 0 0;
-  flex-grow: 1;
+.submitFormButton {
   font-weight: 500;
-  font-size: large;
-  background-color: white;
-  border-color: #bdbbb9;
+  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 46px;
+  background-color: #007c89;
+  color: #ffffff;
+  width: 200px;  
+}
+
+.submitFormButton:disabled {
+  pointer-events: none;
+  border: 1px solid #dedddc;
+  background-color: transparent;
+  color: #bdbbb9;
 }
 
 .button-wrapper {
-  display: flex;
+  display: block;
   max-height: 54px;
 }
 
@@ -46,6 +67,8 @@
 .error {
   font-size: 1.2rem;
   color: rgb(158, 11, 11);
+  padding-bottom: 0px;
+  margin-top: 0px;
 }
 
 .field {
@@ -59,9 +82,39 @@
   padding-top: 20px;
 }
 
-.header {
-  font-size: 4rem;
-  margin-bottom: 40px;
+.h1 {
+  font-family: "Means Web", Georgia, Times, "Times New Roman", serif;
+  font-size: 44px;
+  line-height: 48,4px;
+  text-decoration: none;
+  text-align: center;
+  word-spacing: 0px;
+  background-color: #ffffff;
+  background-position: 0% 0%;
+  color:#241c15;
+  height: 48px;
+  width: 570px;
+  display: block;
+  transform:none;
+  transition: all 0s ease 0s;
+  box-sizing: border-box;
+}
+
+.h2 {
+  font-family: "Graphik Web", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  word-spacing: 0px;
+  background-color: #ffffff;
+  background-position: 0% 0%;
+  color:#241c15;
+  height: auto;
+  width: auto;
+  display: inline;
+  transform: none;
+  transition: all 0s ease 0s;
+  box-sizing: border-box;
 }
 
 .input {
@@ -83,10 +136,7 @@
   text-decoration: none;
 }
 
-.subheader {
-  margin-bottom: 30px;
-  font-size: 1.5rem;
-}
+
 
 .ul {
   padding-right: 120px;
