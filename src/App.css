@@ -46,7 +46,16 @@ ol,
 ul,
 fieldset,
 form,
-label,
+label {
+  color: #241c15;
+  font-weight: 500;
+  display: block;
+  padding-bottom: 12px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 legend,
 textarea,
 table,
