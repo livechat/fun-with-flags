@@ -50,7 +50,6 @@ label {
   color: #241c15;
   font-weight: 500;
   display: block;
-  max-width: 635px;
   padding-bottom: 12px;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -93,5 +92,3 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
 }
-
-

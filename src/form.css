@@ -4,6 +4,10 @@
   width: 100%;
 }
 
+.formWrapper {
+  max-width: 650px;
+}
+
 .bullet--gray {
   color: #bdbbb9;
 }
@@ -24,7 +28,8 @@
 
 .submitFormButton {
   font-weight: 500;
-  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+  font-family: "Graphik Web", "Helvetica Neue", Helvetica, Arial, Verdana,
+    sans-serif;
   text-align: center;
   vertical-align: middle;
   text-transform: capitalize;
@@ -37,7 +42,7 @@
   line-height: 46px;
   background-color: #007c89;
   color: #ffffff;
-  width: 200px;  
+  width: 200px;
 }
 
 .submitFormButton:disabled {
@@ -85,30 +90,31 @@
 .h1 {
   font-family: "Means Web", Georgia, Times, "Times New Roman", serif;
   font-size: 44px;
-  line-height: 48,4px;
+  line-height: 48, 4px;
   text-decoration: none;
   text-align: center;
   word-spacing: 0px;
   background-color: #ffffff;
   background-position: 0% 0%;
-  color:#241c15;
+  color: #241c15;
   height: 48px;
   width: 570px;
   display: block;
-  transform:none;
+  transform: none;
   transition: all 0s ease 0s;
   box-sizing: border-box;
 }
 
 .h2 {
-  font-family: "Graphik Web", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  font-family: "Graphik Web", "Helvetica Neue", Helvetica, Arial, Verdana,
+    sans-serif;
   font-size: 16px;
   line-height: 24px;
   text-decoration: none;
   word-spacing: 0px;
   background-color: #ffffff;
   background-position: 0% 0%;
-  color:#241c15;
+  color: #241c15;
   height: auto;
   width: auto;
   display: inline;
@@ -135,8 +141,6 @@
 .link--nodecoration {
   text-decoration: none;
 }
-
-
 
 .ul {
   padding-right: 120px;
